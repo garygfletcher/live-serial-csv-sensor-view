@@ -68,7 +68,12 @@ SerialPort.list().then(ports => {
 
 document.getElementById('portlist').addEventListener('change', function(){
 
-  port = new SerialPort("/dev/tty.usbmodem14301", { baudRate: 9600 })
+	var e = document.getElementById("portlist");
+	var v = e.options[e.selectedIndex].value;
+
+	console.log(v);
+
+	port = new SerialPort(v, { baudRate: 9600 })
   port.pipe(parser)
   parser.on('data', line => updateData(`${line}`))
 
@@ -156,7 +161,7 @@ function updateData(d){
         borderColor: newColor,
         data: [],
         fill: false,
-				lineTension: 0,    
+				lineTension: 0,
       };
 
       chart.data.datasets.push(newDataset);

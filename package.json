@@ -1,7 +1,7 @@
 {
-    "name": "electron-serialport",
+    "name": "Sensor_CSV_Monitor",
     "version": "1.0.1",
-    "description": "Sensor CSV Monitor",
+    "description": " A cross platform electron app for viewing serial csv data from sensors live with export to csv functionality",
     "main": "main.js",
     "scripts": {
         "start": "electron .",
