@@ -155,7 +155,8 @@ function updateData(d){
         backgroundColor: newColor,
         borderColor: newColor,
         data: [],
-        fill: false
+        fill: false,
+				lineTension: 0,    
       };
 
       chart.data.datasets.push(newDataset);
@@ -219,6 +220,7 @@ function drawChart() {
 					data: [
 					],
 					fill: false,
+					lineTension: 0,
 				}, {
 					label: 'Sensor 2',
 					fill: false,
@@ -226,6 +228,7 @@ function drawChart() {
 					borderColor: window.chartColors.blue,
 					data: [
 					],
+					lineTension: 0,
 				}]
 			},
 			options: {
