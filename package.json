@@ -1,0 +1,37 @@
+{
+    "name": "electron-serialport",
+    "version": "1.0.1",
+    "description": "Sensor CSV Monitor",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "install": "electron-rebuild",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder"
+    },
+    "keywords": [
+        "Electron",
+        "quick",
+        "start",
+        "tutorial",
+        "demo"
+    ],
+    "author": "GitHub",
+    "license": "CC0-1.0",
+    "devDependencies": {
+        "electron": "^5.0.5",
+        "electron-builder": "^21.2.0",
+        "electron-rebuild": "^1.8.6"
+    },
+    "dependencies": {
+        "electron-chartjs": "^1.0.0",
+        "serialport": "^8.0.5",
+        "tableify": "^1.1.0"
+    },
+    "build": {
+        "appId": "com.sensor.csv.monitor",
+        "mac": {
+            "category": "your.app.category.type"
+        }
+    }
+}

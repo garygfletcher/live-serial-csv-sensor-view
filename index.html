@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Live Sensor Data</title>
+    <style>
+        table { border-collapse: collapse; }
+        table, th, td { border: 1px solid black; }
+    </style>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Scripts -->
+    <script>
+      delete module.exports
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
+</head>
+
+<body>
+    <h1>Live Sensor Data</h1>
+
+    We are using Node.js <span id="node-version"></span>, Chromium <span id="chrome-version"></span>, Electron <span id="electron-version"></span>, and Serialport <span id="serialport-version"></span>
+
+    <div id="error"></div>
+    <div id="ports"></div>
+    <select id="portlist">
+      <option value="0">please select</option>
+    </select>
+    <select id="displaynumber">
+      <option value="0">show all</option>
+      <option value="10">show 10</option>
+      <option value="50">show 50</option>
+      <option value="100">show 100</option>
+      <option value="500">show 500</option>
+      <option value="1000">show 1000</option>
+    </select>
+    <button id="export">export chart data</button>
+
+    <script src="./renderer.js"></script>
+    <canvas class="chart"></canvas>
+
+    <div id="data"></div>
+
+</body>
+
+
+
+
+</html>
